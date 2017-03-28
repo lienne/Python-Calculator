@@ -1,5 +1,8 @@
 #Simple Calculator
 
+expression = []
+expression = raw_input()
+
 def add():
 	x = raw_input()
 	y = raw_input()

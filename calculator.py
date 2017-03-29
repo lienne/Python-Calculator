@@ -1,27 +1,30 @@
 #Simple Calculator
 
-expression = []
-expression = raw_input()
+exp = []
+exp = raw_input()
 
-def add():
-	x = raw_input()
-	y = raw_input()
-	result = x + y
+if exp[1] == '+':
+	result = add(exp)
+if exp[1] == '-':
+	result = sub(exp)
+if exp[1] == '/':
+	result = div(exp)
+if exp[1] == '*':
+	result = mult(exp)
+
+
+def add(exp):
+	result = int(exp[0]) + int(exp[2])
 	return result
 
 def sub():
-	x = raw_input()
-	y = raw_input()
-	result = x - y
+	result = int(exp[0]) - int(exp[2])
 	return result
 
 def div():
-	x = raw_input()
-	y = raw_input()
-	result = x/y
+	result = int(exp[0]) / int(exp[2])
 	return result
 
 def mult():
-	x = raw_input()
-	y = raw_input()
-	result = x*y
+	result = int(exp[0]) * int(exp[2])
+	return result
